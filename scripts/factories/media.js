@@ -18,7 +18,7 @@ class MediaFactory {
     createVideo(media) {
         const video = document.createElement('video');
         video.src = `assets/medias/${media.photographerId}/${media.video}`;
-    
+        video.setAttribute('controls', '');
         return video;
     }
 }
