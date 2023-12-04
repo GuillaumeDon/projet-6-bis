@@ -14,11 +14,12 @@ class PhotographerCard {
         // Ajout des éléments à 'link' au lieu de 'article'
         link.appendChild(this.createImageElement());
         link.appendChild(this.createHeadingElement());
-        link.appendChild(this.createLocationElement());
-        link.appendChild(this.createTaglineElement());
-        link.appendChild(this.createPriceElement());
+
 
         article.appendChild(link);
+        article.appendChild(this.createLocationElement());
+        article.appendChild(this.createTaglineElement());
+        article.appendChild(this.createPriceElement());
 
         return article;
     }
