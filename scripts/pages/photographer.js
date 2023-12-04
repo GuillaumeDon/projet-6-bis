@@ -21,13 +21,13 @@ class PhotographerPage {
         if (this.photographer) {
 
             const photographerCard = new PhotographerCard(this.photographer);
-            const card = photographerCard.createCard();
+            const card = photographerCard.createCardNoLink();
             document.querySelector('.photograph-header').appendChild(card);
 
          
-            const priceElement = document.createElement('p');
-            priceElement.textContent = `${this.photographer.price}€/jour`;
-            document.querySelector('.photograph-header').appendChild(priceElement);
+            // const priceElement = document.createElement('p');
+            // priceElement.textContent = `${this.photographer.price}€/jour`;
+            // document.querySelector('.photograph-header').appendChild(priceElement);
         } else {
             console.error("Photographe non trouvé");
         }
