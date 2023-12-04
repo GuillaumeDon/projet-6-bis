@@ -9,7 +9,7 @@ class PhotographerCard {
         // Création d'un lien cliquable pour chaque carte
         const link = document.createElement('a');
         link.href = `photographer.html?id=${this.photographer.id}`;
-        link.setAttribute('aria-label', `Voir la page de ${this.photographer.name}`);
+        link.setAttribute('aria-label', ` ${this.photographer.name}`);
 
         // Ajout des éléments à 'link' au lieu de 'article'
         link.appendChild(this.createImageElement());
