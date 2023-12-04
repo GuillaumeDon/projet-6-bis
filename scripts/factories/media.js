@@ -1,22 +1,24 @@
 class MediaFactory {
     createMedia(media) {
-        if (media.type === 'image') {
+        if (media.image) {
             return this.createImage(media);
-        } else if (media.type === 'video') {
+        } else if (media.video) {
             return this.createVideo(media);
         }
     }
 
     createImage(media) {
         const img = document.createElement('img');
-        img.src = `../assets/photographers/medias/${media.photographerId}/${media.src}`;
+        img.src = `assets/medias/${media.photographerId}/${media.image}`;
         img.alt = media.title;
+   
         return img;
     }
 
     createVideo(media) {
         const video = document.createElement('video');
-        video.src = `../assets/photographers/medias/${media.photographerId}/${media.src}`;
+        video.src = `assets/medias/${media.photographerId}/${media.video}`;
+    
         return video;
     }
 }
