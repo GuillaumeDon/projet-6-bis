@@ -40,6 +40,12 @@ class MediaFactory {
         const likes = document.createElement('span');
         likes.textContent = `${media.likes} likes`;
         container.appendChild(likes);
+
+        const heart=document.createElement('img');
+        heart.src = 'assets/images/like.png';
+        heart.classList.add('heart');
+        container.appendChild(heart);
+
     
         return container;
     }
@@ -59,10 +65,16 @@ class MediaFactory {
         title.textContent = media.title;
         container.appendChild(title);
     
-        // Assuming media.likes holds the number of likes
+     
         const likes = document.createElement('span');
         likes.textContent = `${media.likes} likes`;
         container.appendChild(likes);
+
+        const heart=document.createElement('img');
+        heart.src = 'assets/images/like.png';
+        heart.classList.add('heart');
+        container.appendChild(heart);
+
     
         return container;
     }

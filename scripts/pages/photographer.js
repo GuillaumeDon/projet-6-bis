@@ -38,6 +38,9 @@ class PhotographerPage {
             const mediaFactory = new MediaFactory();
             const mediaSection = document.querySelector('.photographer-media');
     
+            // Clear existing media
+            mediaSection.innerHTML = '';
+    
             this.media.forEach(mediaItem => {
                 const mediaElement = mediaFactory.createMedia(mediaItem);
                 mediaSection.appendChild(mediaElement);
@@ -51,6 +54,25 @@ class PhotographerPage {
         await this.getPhotographerData();
         this.displayPhotographerInfo();
         this.displayPhotographerMedia();
+    
+        document.getElementById('filtre').addEventListener('change', (event) => {
+            this.sortMedia(event.target.value);
+            this.displayPhotographerMedia();
+        });
+    }
+
+    sortMedia(criteria) {
+        switch(criteria) {
+            case 'popularity':
+                this.media.sort((a, b) => b.likes - a.likes);
+                break;
+            case 'date':
+                this.media.sort((a, b) => new Date(b.date) - new Date(a.date));
+                break;
+            case 'title':
+                this.media.sort((a, b) => a.title.localeCompare(b.title));
+                break;
+        }
     }
 }
 
