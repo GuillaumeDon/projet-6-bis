@@ -74,6 +74,8 @@ class PhotographerPage {
                 break;
         }
     }
+
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {

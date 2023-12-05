@@ -2,9 +2,8 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/test.css" rel="stylesheet" type="text/css" />
+   
 
- 
 
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -35,8 +34,12 @@
     </section>
     
     </section>
+    <div class="number-like">
+      
+
+    </div>
     </main>
-    <div id="contact_modal">
+    <!-- <div id="contact_modal">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
@@ -50,7 +53,35 @@
           <button class="contact_button">Envoyer</button>
 				</form>
 			</div>
-		</div>
+		</div> -->
+
+    <div id="contact_modal">
+      <div class="modal">
+          <header>
+              <h2>Contactez-moi</h2>
+              <img src="assets/icons/close.svg" onclick="closeModal()" />
+          </header>
+          <form>
+              <div>
+                  <label>Prénom</label>
+                  <input type="text" id="first-name" required />
+              </div>
+              <div>
+                  <label>Nom</label>
+                  <input type="text" id="last-name" required />
+              </div>
+              <div>
+                  <label>Email</label>
+                  <input type="email" id="email" required />
+              </div>
+              <div>
+                  <label>Votre message</label>
+                  <textarea id="message" required></textarea>
+              </div>
+              <button class="contact_button" type="submit">Envoyer</button>
+          </form>
+      </div>
+  </div>
     <script src="/scripts/pages/photographer.js" type="module"></script>
     <script src="/scripts/utils/contactForm.js"></script>
   </body>

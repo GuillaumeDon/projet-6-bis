@@ -44,6 +44,8 @@ class MediaFactory {
         const heart=document.createElement('img');
         heart.src = 'assets/images/like.png';
         heart.classList.add('heart');
+        heart.addEventListener('click', () => this.toggleLike(media, likes));
+
         container.appendChild(heart);
 
     
@@ -73,11 +75,36 @@ class MediaFactory {
         const heart=document.createElement('img');
         heart.src = 'assets/images/like.png';
         heart.classList.add('heart');
+        heart.addEventListener('click', () => this.toggleLike(media, likes));
+
         container.appendChild(heart);
 
     
         return container;
     }
+
+    toggleLike(media, likesElement) {
+        // Vérifie si le média a déjà été liké
+        if (media.liked) {
+            media.likes--;
+            media.liked = false;
+        } else {
+            media.likes++;
+            media.liked = true;
+        }
+    
+        // Met à jour l'affichage des likes
+        likesElement.textContent = `${media.likes} likes`;
+    
+        // Met à jour le fichier JSON (voir ci-dessous pour plus de détails)
+        this.updateLikesInJson(media);
+    }
+
+    updateLikesInJson(media) {
+        // Utiliser localStorage pour simuler la mise à jour du fichier JSON
+        localStorage.setItem(`mediaLikes-${media.id}`, media.likes);
+    }
+    
 }
 
 export { MediaFactory };
