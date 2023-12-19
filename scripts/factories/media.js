@@ -83,6 +83,7 @@ class MediaFactory {
         return container;
     }
 
+    //Déplacer dans les pages
     toggleLike(media, likesElement) {
         // Vérifie si le média a déjà été liké
         if (media.liked) {
