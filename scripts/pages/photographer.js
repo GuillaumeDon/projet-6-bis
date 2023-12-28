@@ -50,10 +50,19 @@ class PhotographerPage {
         }
     }
 
+    displayLikesAndPrice() {
+        const totalLikes = this.media.reduce((sum, mediaItem) => sum + mediaItem.likes, 0);
+        document.querySelector('.counter-like').innerHTML = `
+            Prix par jour : ${this.photographer.price}€<br>
+            Total des likes : ${totalLikes}
+        `;
+    }
+
     async init() {
         await this.getPhotographerData();
         this.displayPhotographerInfo();
         this.displayPhotographerMedia();
+        this.displayLikesAndPrice();
     
         document.getElementById('filtre').addEventListener('change', (event) => {
             this.sortMedia(event.target.value);
