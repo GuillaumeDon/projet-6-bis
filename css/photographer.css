@@ -23,6 +23,7 @@
 }
 
 .modal {
+    
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
@@ -94,6 +95,94 @@ article{
 }
 
 
+img:hover{
+    cursor:pointer;
+}
 
 
 
+
+
+
+/* #lightbox_modal {
+    display: none;
+ 
+}
+
+*/
+/* .lightbox {
+    
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+ 
+ 
+}  */
+
+
+
+#lightbox_modal{
+    display: none;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    background-color: red;
+    width: 80%;
+    height: 80%;
+    max-width: 600px; 
+    border-radius: 10px; 
+}
+
+#lightbox_modal>img{
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    
+}
+
+#lightbox_modal>video{
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+
+/* .lightbox {
+    background-color: #DB8876;
+    border-radius: 5px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+} */
+
+.counter-like{
+    width: 200px;
+    height: 3rem;
+    background-color: #DB8876;
+    position: sticky;
+    
+    bottom: 0px;
+    left: 1050px;
+}

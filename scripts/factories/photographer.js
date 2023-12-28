@@ -89,6 +89,7 @@ class PhotographerCard {
         article.appendChild(tagline);
         article.appendChild(price);
 
+
         return article;
     }
 }

@@ -9,12 +9,14 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
+    <script src="https://kit.fontawesome.com/486886617b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="fisheye Home Page"/></a>
 
     </header>
+   
     <main id="main">
       <section class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
@@ -34,7 +36,7 @@
     </section>
     
     </section>
-    <div class="number-like">
+    <div class="counter-like">
       
 
     </div>
@@ -54,6 +56,15 @@
 				</form>
 			</div>
 		</div> -->
+    <div id="lightbox_modal">
+      <img src="assets/icons/close.svg" onclick="closeSlider()" />
+      <div class="lightbox">
+        <img src="assets/icons/close.svg" onclick="closeSlider()" />
+    
+      </div>
+    </div>
+
+
 
     <div id="contact_modal">
       <div class="modal">
@@ -84,5 +95,6 @@
   </div>
     <script src="/scripts/pages/photographer.js" type="module"></script>
     <script src="/scripts/utils/contactForm.js"></script>
+    <script src="/scripts/utils/slider.js"></script>
   </body>
 </html>

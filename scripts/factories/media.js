@@ -47,6 +47,20 @@ class MediaFactory {
         heart.addEventListener('click', () => this.toggleLike(media, likes));
 
         container.appendChild(heart);
+        
+
+        //Event clique sur une image
+        // img.addEventListener("click", ()=>{
+        //     displaySlider(imageUrl);
+            
+        //     console.log('test image clique');
+        // })
+        img.addEventListener("click", () => {
+            const mediaTitle = media.title;
+            displaySlider(`assets/medias/${media.photographerId}/${media.image}`,mediaTitle);
+        });
+        
+
 
     
         return container;
@@ -79,6 +93,18 @@ class MediaFactory {
 
         container.appendChild(heart);
 
+                //Event clique sur une image
+                // video.addEventListener("click", ()=>{
+                //     displaySlider(imageUrl);
+                //     console.log('test video clique');
+                // })
+
+                video.addEventListener("click", () => {
+                    const mediaTitle = media.title;
+                    displaySlider(`assets/medias/${media.photographerId}/${media.video}`, mediaTitle);
+                });
+                
+        
     
         return container;
     }

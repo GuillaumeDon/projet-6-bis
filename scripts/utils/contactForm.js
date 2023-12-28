@@ -23,3 +23,9 @@ document.querySelector('#contact_modal form').addEventListener('submit', functio
     console.log('Message:', message);
 
 });
+
+
+
+
+
+
