@@ -1,3 +1,4 @@
+
 class PhotographerCard {
     constructor(photographer) {
         this.photographer = photographer;
