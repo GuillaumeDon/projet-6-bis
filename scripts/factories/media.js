@@ -232,7 +232,7 @@ class MediaFactory {
 
 const mediaFactory = new MediaFactory();
 const mediaSection = document.querySelector('.photographer-media');
-const mediaList = mediaFactory.mediaList; // Utilisez mediaFactory.mediaList pour obtenir la liste des médias
+const mediaList = mediaFactory.mediaList; 
 
 mediaSection.innerHTML = '';
 mediaList.forEach(mediaItem => {

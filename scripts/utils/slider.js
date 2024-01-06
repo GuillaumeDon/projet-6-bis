@@ -95,31 +95,33 @@
 
 
 
-
 class Slider {
-    constructor(mediaList) {
-        this.mediaList = mediaList;
+    constructor(mediaList,mediaID,media) {
+        this.mediaList = mediaList || [];
+        // this.media =
+        //boucle => this.media =
+        //methode displaySlider(media.url, media.title)
         this.currentMediaIndex = 0;
-        this.displaySlider = this.displaySlider.bind(this);
-        this.showPreviousMedia = this.showPreviousMedia.bind(this);
-        this.showNextMedia = this.showNextMedia.bind(this);
-        this.closeSlider = this.closeSlider.bind(this);
+     console.log("constructor");
+
+     //4 méthodes
+    //  console.log(m);
     }
 
     showPreviousMedia() {
+        console.log(this.currentMediaIndex);
         if (this.currentMediaIndex > 0) {
             this.currentMediaIndex--;
-            const media = this.mediaList[this.currentMediaIndex];
+            this.media = this.mediaList[this.currentMediaIndex];
             this.displaySlider(media.mediaUrl, media.mediaTitle);
             console.log("click test gauche");
         }
     }
 
     showNextMedia() {
-        console.log("test début fonction");
         if (this.currentMediaIndex < this.mediaList.length - 1) {
             this.currentMediaIndex++;
-            const media = this.mediaList[this.currentMediaIndex];
+            this.media = this.mediaList[this.currentMediaIndex];
             this.displaySlider(media.mediaUrl, media.mediaTitle);
             console.log("click test droite");
         }
@@ -165,7 +167,7 @@ class Slider {
         lightboxModal.style.display = 'block';
 
         const closeButton = document.createElement('img');
-        closeButton.src = '../assets/icons/closeSlider.svg';
+        closeButton.src = 'assets/icons/closeSlider.svg';
         closeButton.classList.add('close-button');
         closeButton.onclick = this.closeSlider;
 
