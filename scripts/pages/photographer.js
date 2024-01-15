@@ -35,12 +35,12 @@ class PhotographerPage {
     displayPhotographerMedia() {
         if (this.media) {
             const mediaFactory = new MediaFactory();
-            const mediaSection = document.querySelector('.photographer-media');         
+            const mediaSection = document.querySelector('.photographer-media');
             const slider = new Slider(this.media);
-            
+
 
             mediaSection.innerHTML = '';
-            
+
             this.media.forEach((mediaItem, index) => { //adding index to know which media has been clicked on
                 const mediaElement = mediaFactory.createMedia(mediaItem);
                 mediaSection.appendChild(mediaElement);
