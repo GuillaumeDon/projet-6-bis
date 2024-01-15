@@ -7,7 +7,11 @@ class Slider {
 
    constructor(mediaList){
        this.mediaList = mediaList;
-       console.log(this.mediaList)
+    //    console.log(this.mediaList)
+    //TEST
+    this.currentIndex = 0;
+    
+    document.addEventListener('keydown', this.handleKeyDown.bind(this));
    }
 
 
@@ -88,7 +92,32 @@ class Slider {
        closeButton.onclick = this.closeSlider;
 
        lightboxModal.appendChild(closeButton);
+
+
+
+
+
+
+
+       
    }
+
+
+   handleKeyDown(event) {
+    switch (event.key) {
+        case 'ArrowLeft':
+            this.showPreviousMedia();
+            break;
+        case 'ArrowRight':
+            this.showNextMedia();
+            break;
+        case 'Escape':
+            this.closeSlider();
+            break;
+        default:
+            break;
+    }
+}
 
    closeSlider() {
        const modal = document.getElementById("lightbox_modal");
