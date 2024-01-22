@@ -19,13 +19,18 @@
             <!-- <button class="contact_button" aria-label="Contact me" onclick="displayModal()">Contactez-moi</button> -->
         </section>
         <section class="photograph-sort">
-        <label for="filtre">Trier par :</label>
-        <select name="filtre" id="filtre" aria-label="order by">
-            <option value="popularity" class="options">Popularité</option>
-            <option value="date" class="options">Date</option>
-            <option value="title" class="options">Titre</option>
-        </select>
-    </section>
+            <label for="filtre">Trier par :</label>
+            <div class="dropdown">
+                <button class="dropbtn">Popularité</button>
+                <ul class="dropdown-content">
+                    <li><a href="#" data-value="popularity">Popularité</a></li>
+                    <li><a href="#" data-value="date">Date</a></li>
+                    <li><a href="#" data-value="title">Titre</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
         <section class="photographer-media"></section>
 
         <div class="counter-like"></div>
