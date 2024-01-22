@@ -1,5 +1,9 @@
 @import url("photographer.css");
 
+
+*{
+    border: 1px red solid;
+}
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
@@ -55,9 +59,11 @@ main{
     /* background-color: red; */
 }
 
-.photographer-location{
+.photographer-location,
+.div-bio p:first-child{
 
     color: #901C1C;
+    font-size: 20px;
    
 }
 
@@ -67,11 +73,14 @@ main{
    
 }
 
-.photographer_section article h2 {
+.photographer_section article h2,
+.div-bio h2 {
     color: #D3573C;
     font-size: 36px;
 
 }
+
+
 
 .photographer_section article img {
     height: 200px;
@@ -98,6 +107,14 @@ height: 20px;
 width: 20px;
 }
 
+
+/* .heart2{
+    height: 20px;
+    width: 20px;
+    color: black;
+  
+    } */
+    
 
 
 

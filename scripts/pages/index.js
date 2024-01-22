@@ -1,5 +1,6 @@
 import { PhotographerCard } from '../factories/photographer.js';
 
+
 class PhotographersGallery {
     constructor() {
         this.photographersSection = document.querySelector('.photographer_section');

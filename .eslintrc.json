@@ -8,5 +8,7 @@
         "sourceType": "module"
     },
     "rules": {
+
+        //définir ici, voir tuto, 2-3 règles
     }
 }

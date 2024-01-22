@@ -64,8 +64,24 @@ class PhotographerCard {
 
 
     createCardNoLink() {
-        const article = document.createElement('article');
+        const divBio = document.createElement('div');
+        divBio.classList.add('div-bio');
+        const divPicture = document.createElement('div');
+        divPicture.classList.add('div-picture');
+
+        const btnContact =document.createElement('button');
+        btnContact.classList.add('contact_button');
+        btnContact.innerHTML =`<class="contact_button" aria-label="Contact me" onclick="displayModal()">Contactez-moi`
+
+
+
+
+
+
+        const headerPhotograph = document.createElement('div');
+        headerPhotograph.classList.add('headerPhotograph');
         const img = document.createElement('img');
+        img.classList.add('bio-picture');
         img.setAttribute('src', `../assets/photographers/profils-picture/${this.photographer.portrait}`);
         img.setAttribute('alt', `${this.photographer.name}`);
         
@@ -80,18 +96,21 @@ class PhotographerCard {
         tagline.textContent = this.photographer.tagline;
         tagline.className = 'photographer-tagline';
 
-        const price = document.createElement('p');
-        price.textContent = `${this.photographer.price}€/jour`;
-        price.className = 'photographer-price';
+        // const price = document.createElement('p');
+        // price.textContent = `${this.photographer.price}€/jour`;
+        // price.className = 'photographer-price';
+        headerPhotograph.appendChild(divBio);
+        divBio.appendChild(h2);
+        divBio.appendChild(location);
+        divBio.appendChild(tagline);
+        headerPhotograph.appendChild(btnContact);
+        headerPhotograph.appendChild(divPicture);
+        divPicture.appendChild(img);
 
-        article.appendChild(img);
-        article.appendChild(h2);
-        article.appendChild(location);
-        article.appendChild(tagline);
-        article.appendChild(price);
+        // article.appendChild(price);
 
 
-        return article;
+        return headerPhotograph;
     }
 }
 

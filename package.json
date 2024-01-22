@@ -2,8 +2,7 @@
 
   "scripts": {
     "dev": "http-server",
-    "lint": "eslint *.js"
-   },
+    "lint": "eslint *.js"  }, //vérifier le chemin, voir la synthaxe 
 
 
   "devDependencies": {

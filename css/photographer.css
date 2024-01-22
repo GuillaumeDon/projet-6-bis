@@ -7,6 +7,23 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: space-around; */
+}
+
+.bio-picture{
+    height: 200px;
+    width: 200px;
+    border-radius: 15rem;
+}
+
+
+.headerPhotograph{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .contact_button {
@@ -92,6 +109,7 @@ form input {
 
 article{
     display: flex;
+    justify-content: space-around;
 }
 
 
@@ -182,9 +200,13 @@ img:hover{
     height: 3rem;
     background-color: #DB8876;
     position: sticky;
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
     bottom: 0px;
     left: 1050px;
+    border-radius: 5px;
 }
 
 
@@ -204,3 +226,5 @@ cursor: pointer;
     /* color: green; */
 
 }
+
+
