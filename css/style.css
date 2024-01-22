@@ -1,9 +1,9 @@
 @import url("photographer.css");
 
 
-*{
+/* *{
     border: 1px red solid;
-}
+} */
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
@@ -34,6 +34,7 @@ h1 {
 
 main{
     height: 1000px;
+ 
 }
 .logo {
     height: 50px;
@@ -105,7 +106,41 @@ video{
 .heart{
 height: 20px;
 width: 20px;
+position: relative;
+bottom: -5px;
 }
+
+
+/* select{
+    background-color: #901C1C;
+    color: white;
+    width: 130px;
+    text-align: center;
+    
+} */
+
+select {
+    background-color: #911c1c;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    height: 59px;
+    padding: 0.2rem;
+    margin-top: 2rem;
+    width: 170px;
+    margin-bottom: 30px;
+  }
+
+.options{
+    border: solid white 1px;
+    
+}
+
+label{
+    font-weight: bold;
+}
+
 
 
 /* .heart2{

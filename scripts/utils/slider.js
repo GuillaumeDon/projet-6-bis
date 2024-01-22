@@ -91,7 +91,7 @@ class Slider {
         lightboxModal.style.display = 'block';
 
         const closeButton = document.createElement('img');
-        closeButton.src = 'assets/icons/closeSlider.svg';
+        closeButton.src = 'assets/images/closeLightbox.png';
         closeButton.alt="Close dialog";
         closeButton.classList.add('close-button');
         closeButton.onclick = this.closeSlider;

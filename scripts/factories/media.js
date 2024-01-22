@@ -17,6 +17,7 @@ class MediaFactory {
     }
 
     createImage(media) {
+
         const container = document.createElement('div');
         container.classList.add('media-container');
 
@@ -25,13 +26,26 @@ class MediaFactory {
         img.alt = media.title;
         container.appendChild(img);
 
+
+        const legend = document.createElement('div');
+        legend.classList.add('media-legend');
+        container.appendChild(legend);
+
+ 
+
+
         const title = document.createElement('p');
         title.textContent = media.title;
-        container.appendChild(title);
+        legend.appendChild(title);
+
+        const legendLike = document.createElement('div');
+        legendLike.classList.add('media-legend-likes');
+        legend.appendChild(legendLike);
+
 
         const likes = document.createElement('span');
         likes.textContent = `${media.likes} likes`;
-        container.appendChild(likes);
+        legendLike.appendChild(likes);
 
         const heart = document.createElement('img');
         heart.src = 'assets/images/like.png';
@@ -44,7 +58,10 @@ class MediaFactory {
             this.toggleLike(media, likes);
         });
 
-        container.appendChild(heart);
+
+        
+        legendLike.appendChild(heart);
+       
 
         return container;
     }
@@ -59,13 +76,24 @@ class MediaFactory {
         video.setAttribute('controls', '');
         container.appendChild(video);
 
+        const legend = document.createElement('div');
+        legend.classList.add('media-legend');
+        container.appendChild(legend);
+
+
         const title = document.createElement('p');
         title.textContent = media.title;
-        container.appendChild(title);
+        legend.appendChild(title);
+
+        
+        const legendLike = document.createElement('div');
+        legendLike.classList.add('media-legend-likes');
+        legend.appendChild(legendLike);
+
 
         const likes = document.createElement('span');
         likes.textContent = `${media.likes} likes`;
-        container.appendChild(likes);
+        legendLike.appendChild(likes);
 
         const heart = document.createElement('img');
         heart.src = 'assets/images/like.png';
@@ -78,7 +106,7 @@ class MediaFactory {
             this.toggleLike(media, likes);
         });
 
-        container.appendChild(heart);
+        legendLike.appendChild(heart);
 
         return container;
     }
