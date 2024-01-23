@@ -217,11 +217,11 @@ label{
     width: 72px;
 }
 
-.dropdown-content li:nth-child(-n + 2) {
+/* .dropdown-content li:nth-child(-n + 2) {
     border-bottom: solid white 1px ;
     
 
-} 
+}  */
 
 
 
@@ -245,7 +245,13 @@ label{
 
 
 
-
+.menu-barre{
+    position: relative;
+    top: 20px;
+    height: 1px;
+    width: 120%;
+    background-color: white;
+}
 
 
 
