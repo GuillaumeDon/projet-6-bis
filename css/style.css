@@ -166,6 +166,8 @@ label{
     font-size: 16px;
     border: none;
     cursor: pointer;
+    width: 104px;
+    height: 50px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -179,16 +181,17 @@ label{
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 0px;
+    
 
-    background-color: green;
+    /* background-color: green; */
     color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     list-style: none;
  
     margin: 0;
    
-    text-align: center;
+    /* text-align: center; */
         /* background-color: #911c1c; */
      /* width: 90px; */
 }
@@ -210,8 +213,17 @@ label{
     font-size: 16px;
     border: none;
     cursor: pointer;
+    /* border-bottom: solid white 1px ; */
+    width: 72px;
 }
+
+.dropdown-content li:nth-child(-n + 2) {
+    border-bottom: solid white 1px ;
     
+
+} 
+
+
 
 
 /* Change color of dropdown links on hover */
@@ -230,11 +242,6 @@ label{
     background-color: rgb(80, 11, 11);
 }
  */
-
-
-
-
-
 
 
 
