@@ -172,29 +172,47 @@ label{
 .dropdown {
     position: relative;
     display: inline-block;
+    
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #911c1c;
+
+    background-color: green;
     color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     list-style: none;
-   
+ 
     margin: 0;
-    width: 90px;
+   
+    text-align: center;
+        /* background-color: #911c1c; */
+     /* width: 90px; */
 }
+
+
+
 
 /* Links inside the dropdown */
 .dropdown-content li {
-    color: white;
+    /* color: white;
     text-decoration: none;
     padding: 10px 0px;
     text-align: center;
+
+    background-color: aqua; */
+    background-color: #911c1c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
+    
+
 
 /* Change color of dropdown links on hover */
 /* .dropdown-content li:hover {
@@ -204,6 +222,7 @@ label{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
