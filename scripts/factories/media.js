@@ -31,7 +31,7 @@ class MediaFactory {
         legend.classList.add('media-legend');
         container.appendChild(legend);
 
- 
+
 
 
         const title = document.createElement('p');
@@ -49,7 +49,7 @@ class MediaFactory {
 
         const heart = document.createElement('img');
         heart.src = 'assets/images/like.png';
-        heart.alt= 'likes';
+        heart.alt = 'likes';
         heart.classList.add('heart');
 
         // Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click
@@ -59,9 +59,9 @@ class MediaFactory {
         });
 
 
-        
+
         legendLike.appendChild(heart);
-       
+
 
         return container;
     }
@@ -85,7 +85,7 @@ class MediaFactory {
         title.textContent = media.title;
         legend.appendChild(title);
 
-        
+
         const legendLike = document.createElement('div');
         legendLike.classList.add('media-legend-likes');
         legend.appendChild(legendLike);
@@ -97,7 +97,7 @@ class MediaFactory {
 
         const heart = document.createElement('img');
         heart.src = 'assets/images/like.png';
-        heart.alt= 'likes';
+        heart.alt = 'likes';
         heart.classList.add('heart');
 
         // Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click

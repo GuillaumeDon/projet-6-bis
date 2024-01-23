@@ -1,11 +1,10 @@
 {
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  },
 
   "scripts": {
     "dev": "http-server",
-    "lint": "eslint *.js"  }, //vérifier le chemin, voir la synthaxe 
-
-
-  "devDependencies": {
-    "eslint": "^8.56.0"
-  }
+    "lint": "eslint *.js"
+   }
 }

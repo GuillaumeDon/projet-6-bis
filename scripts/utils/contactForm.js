@@ -76,7 +76,7 @@ function closeModal() {
     modal.setAttribute("aria-hidden", "true");
 }
 
-document.querySelector('#contact_modal form').addEventListener('submit', function(event) {
+document.querySelector('#contact_modal form').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const firstName = document.getElementById('first-name').value;
@@ -93,7 +93,7 @@ document.querySelector('#contact_modal form').addEventListener('submit', functio
 });
 
 // Fermez la modale avec la touche "échap".
-window.addEventListener('keydown', function(event) {
+window.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         closeModal();
     }
