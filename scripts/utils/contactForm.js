@@ -51,6 +51,10 @@ document.querySelector("#contact_modal form").addEventListener("submit", functio
 	console.log("Email:", email);
 	console.log("Message:", message);
 
+	// Reset le formulaire une fois envoyé
+	this.reset();
+
+
 	closeModal(); // Fermez la modale après soumission du formulaire.
 });
 
