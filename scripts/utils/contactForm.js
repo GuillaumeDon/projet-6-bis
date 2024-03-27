@@ -60,6 +60,10 @@ document.querySelector("#contact_modal form").addEventListener("submit", functio
 
 // Fermez la modale avec la touche "échap".
 window.addEventListener("keydown", function (event) {
+
+	if (event.key === "Enter") {
+		displayModal();
+	}
 	if (event.key === "Escape") {
 		closeModal();
 	}
