@@ -12,8 +12,5 @@ class Photographer {
 
 }
 
-// function createPhotographer(data) {
-//     return new Photographer(data);
-// }
 
 
