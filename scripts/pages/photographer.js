@@ -7,6 +7,7 @@ import { Slider } from "../utils/slider.js";
 class PhotographerPage {
 	constructor() {
 		this.photographerId = new URLSearchParams(window.location.search).get("id");
+        
 	}
 
 	async getPhotographerData() {

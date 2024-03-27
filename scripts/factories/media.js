@@ -128,6 +128,11 @@ class MediaFactory {
 	updateLikesInJson(media) {
 		localStorage.setItem(`mediaLikes-${media.id}`, media.likes);
 	}
+
+
+	
+
+	
 }
 
 //removing unused imports
