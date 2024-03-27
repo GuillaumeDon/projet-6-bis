@@ -1,133 +1,133 @@
 
 
-import { Slider } from '../utils/slider.js';
+import { Slider } from "../utils/slider.js";
 
 class MediaFactory {
-    constructor() {
-        this.slider = new Slider(this.mediaList); // Créez une instance de Slider avec mediaList
-        this.mediaList = [];
-    }
+	constructor() {
+		this.slider = new Slider(this.mediaList); // Créez une instance de Slider avec mediaList
+		this.mediaList = [];
+	}
 
-    createMedia(media) {
-        if (media.image) {
-            return this.createImage(media);
-        } else if (media.video) {
-            return this.createVideo(media);
-        }
-    }
+	createMedia(media) {
+		if (media.image) {
+			return this.createImage(media);
+		} else if (media.video) {
+			return this.createVideo(media);
+		}
+	}
 
-    createImage(media) {
+	createImage(media) {
 
-        const container = document.createElement('div');
-        container.classList.add('media-container');
+		const container = document.createElement("div");
+		container.classList.add("media-container");
 
-        const img = document.createElement('img');
-        img.src = `assets/medias/${media.photographerId}/${media.image}`;
-        img.alt = media.title;
-        container.appendChild(img);
-
-
-        const legend = document.createElement('div');
-        legend.classList.add('media-legend');
-        container.appendChild(legend);
+		const img = document.createElement("img");
+		img.src = `assets/medias/${media.photographerId}/${media.image}`;
+		img.alt = media.title;
+		container.appendChild(img);
 
 
-
-
-        const title = document.createElement('p');
-        title.textContent = media.title;
-        legend.appendChild(title);
-
-        const legendLike = document.createElement('div');
-        legendLike.classList.add('media-legend-likes');
-        legend.appendChild(legendLike);
-
-
-        const likes = document.createElement('span');
-        likes.textContent = `${media.likes} likes`;
-        legendLike.appendChild(likes);
-
-        const heart = document.createElement('img');
-        heart.src = 'assets/images/like.png';
-        heart.alt = 'likes';
-        heart.classList.add('heart');
-
-        // Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click
-        heart.addEventListener('click', (event) => {
-            event.stopPropagation();
-            this.toggleLike(media, likes);
-        });
+		const legend = document.createElement("div");
+		legend.classList.add("media-legend");
+		container.appendChild(legend);
 
 
 
-        legendLike.appendChild(heart);
+
+		const title = document.createElement("p");
+		title.textContent = media.title;
+		legend.appendChild(title);
+
+		const legendLike = document.createElement("div");
+		legendLike.classList.add("media-legend-likes");
+		legend.appendChild(legendLike);
 
 
-        return container;
-    }
+		const likes = document.createElement("span");
+		likes.textContent = `${media.likes} likes`;
+		legendLike.appendChild(likes);
 
-    createVideo(media) {
-        const container = document.createElement('div');
-        container.classList.add('media-container');
+		const heart = document.createElement("img");
+		heart.src = "assets/images/like.png";
+		heart.alt = "likes";
+		heart.classList.add("heart");
 
-        const video = document.createElement('video');
-        video.src = `assets/medias/${media.photographerId}/${media.video}`;
-        video.alt = media.title;
-        video.setAttribute('controls', '');
-        container.appendChild(video);
-
-        const legend = document.createElement('div');
-        legend.classList.add('media-legend');
-        container.appendChild(legend);
+		// Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click
+		heart.addEventListener("click", (event) => {
+			event.stopPropagation();
+			this.toggleLike(media, likes);
+		});
 
 
-        const title = document.createElement('p');
-        title.textContent = media.title;
-        legend.appendChild(title);
+
+		legendLike.appendChild(heart);
 
 
-        const legendLike = document.createElement('div');
-        legendLike.classList.add('media-legend-likes');
-        legend.appendChild(legendLike);
+		return container;
+	}
+
+	createVideo(media) {
+		const container = document.createElement("div");
+		container.classList.add("media-container");
+
+		const video = document.createElement("video");
+		video.src = `assets/medias/${media.photographerId}/${media.video}`;
+		video.alt = media.title;
+		video.setAttribute("controls", "");
+		container.appendChild(video);
+
+		const legend = document.createElement("div");
+		legend.classList.add("media-legend");
+		container.appendChild(legend);
 
 
-        const likes = document.createElement('span');
-        likes.textContent = `${media.likes} likes`;
-        legendLike.appendChild(likes);
+		const title = document.createElement("p");
+		title.textContent = media.title;
+		legend.appendChild(title);
 
-        const heart = document.createElement('img');
-        heart.src = 'assets/images/like.png';
-        heart.alt = 'likes';
-        heart.classList.add('heart');
 
-        // Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click
-        heart.addEventListener('click', (event) => {
-            event.stopPropagation();
-            this.toggleLike(media, likes);
-        });
+		const legendLike = document.createElement("div");
+		legendLike.classList.add("media-legend-likes");
+		legend.appendChild(legendLike);
 
-        legendLike.appendChild(heart);
 
-        return container;
-    }
+		const likes = document.createElement("span");
+		likes.textContent = `${media.likes} likes`;
+		legendLike.appendChild(likes);
 
-    toggleLike(media, likesElement) {
-        if (media.liked) {
-            media.likes--;
-            media.liked = false;
-        } else {
-            media.likes++;
-            media.liked = true;
-        }
+		const heart = document.createElement("img");
+		heart.src = "assets/images/like.png";
+		heart.alt = "likes";
+		heart.classList.add("heart");
 
-        likesElement.textContent = `${media.likes} likes`;
+		// Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click
+		heart.addEventListener("click", (event) => {
+			event.stopPropagation();
+			this.toggleLike(media, likes);
+		});
 
-        this.updateLikesInJson(media);
-    }
+		legendLike.appendChild(heart);
 
-    updateLikesInJson(media) {
-        localStorage.setItem(`mediaLikes-${media.id}`, media.likes);
-    }
+		return container;
+	}
+
+	toggleLike(media, likesElement) {
+		if (media.liked) {
+			media.likes--;
+			media.liked = false;
+		} else {
+			media.likes++;
+			media.liked = true;
+		}
+
+		likesElement.textContent = `${media.likes} likes`;
+
+		this.updateLikesInJson(media);
+	}
+
+	updateLikesInJson(media) {
+		localStorage.setItem(`mediaLikes-${media.id}`, media.likes);
+	}
 }
 
 //removing unused imports
