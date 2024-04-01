@@ -27,7 +27,7 @@ function displayModal() {
 	submitButton.addEventListener("keydown", (event) => {
 		if (event.key === "Enter") {
 			event.preventDefault(); // Empêchez le comportement par défaut du bouton submit
-			document.querySelector("#contact_modal form").dispatchEvent(new Event('submit'));
+			document.querySelector("#contact_modal form").dispatchEvent(new Event("submit"));
 		}
 	});
 }

@@ -1,6 +1,3 @@
-
-
-
 class Slider {
 	mediaList;
 	currentIndex;
@@ -13,8 +10,6 @@ class Slider {
 		this.lightboxModal.setAttribute("aria-hidden", "true");
 		this.lightboxModal.setAttribute("role", "dialog");
 		this.lightboxModal.tabIndex = -1;
-
-		document.addEventListener("keydown", this.handleKeyDown.bind(this));
 	}
 
 	showPreviousMedia() {
@@ -43,7 +38,6 @@ class Slider {
 		let mediaUrl;
 		if (media.image) {
 			mediaUrl = `assets/medias/${media.photographerId}/${media.image}`;
-     
 		} else {
 			mediaUrl = `assets/medias/${media.photographerId}/${media.video}`;
 		}
@@ -56,7 +50,6 @@ class Slider {
 		if (mediaUrl.endsWith(".jpg") || mediaUrl.endsWith(".png")) {
 			mediaElement = document.createElement("img");
 			mediaElement.src = mediaUrl;
-       
 		} else if (mediaUrl.endsWith(".mp4")) {
 			mediaElement = document.createElement("video");
 			mediaElement.src = mediaUrl;
@@ -94,9 +87,12 @@ class Slider {
 		closeButton.src = "assets/images/closeLightbox.png";
 		closeButton.alt="Close dialog";
 		closeButton.classList.add("close-button");
-		closeButton.onclick = this.closeSlider;
+		closeButton.onclick = this.closeSlider.bind(this);
 
 		lightboxModal.appendChild(closeButton);
+
+		// Add keydown event listener when the slider is displayed
+		document.addEventListener("keydown", this.handleKeyDown.bind(this));
 	}
 
 	handleKeyDown(event) {
@@ -119,6 +115,9 @@ class Slider {
 		const modal = document.getElementById("lightbox_modal");
 		modal.style.display = "none";
 		modal.setAttribute("aria-hidden", "true");
+
+		// Remove keydown event listener when the slider is closed
+		document.removeEventListener("keydown", this.handleKeyDown.bind(this));
 	}
 }
 
