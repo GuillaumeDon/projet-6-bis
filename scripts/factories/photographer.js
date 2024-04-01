@@ -73,10 +73,10 @@ class PhotographerCard {
 		btnContact.classList.add("contact_form");
 		btnContact.innerHTML ="<class=\"contact_form\" aria-label=\"Contact me\" onclick=\"displayModal()\">Contactez-moi";
 
-		btnContact.addEventListener('keydown', function(event) {
-			if (event.key === 'Enter') {
+		btnContact.addEventListener("keydown", function(event) {
+			if (event.key === "Enter") {
 				event.preventDefault();
-				// Ouvrez le formulaire
+				// eslint-disable-next-line no-undef
 				displayModal();
 			}
 		});
