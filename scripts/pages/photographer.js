@@ -36,15 +36,27 @@ class PhotographerPage {
 			const mediaFactory = new MediaFactory();
 			const mediaSection = document.querySelector(".photographer-media");
 			const slider = new Slider(this.media);
-
+    
 			mediaSection.innerHTML = "";
-
+    
 			this.media.forEach((mediaItem, index) => {
 				const mediaElement = mediaFactory.createMedia(mediaItem);
 				mediaSection.appendChild(mediaElement);
-				mediaElement.addEventListener("click", () => {
+    
+				// Fonction pour afficher le slider
+				const displaySlider = () => {
 					slider.setCurrentIndex(index);
 					slider.displaySlider(mediaItem);
+				};
+    
+				// Ajoute un écouteur d'événements "click"
+				mediaElement.addEventListener("click", displaySlider);
+    
+				// Ajoute un écouteur d'événements "keydown"
+				mediaElement.addEventListener("keydown", (event) => {
+					if (event.key === "Enter") {
+						displaySlider();
+					}
 				});
 			});
 		} else {
