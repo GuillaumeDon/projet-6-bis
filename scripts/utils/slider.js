@@ -15,20 +15,34 @@ class Slider {
 	}
 
 	showPreviousMedia() {
+		let prevIndex;
 		if (this.currentIndex > 0) {
-			this.currentIndex--;
+			prevIndex = this.currentIndex - 1;
 		} else {
-			this.currentIndex = this.mediaList.length - 1;
+			prevIndex = this.mediaList.length - 1;
 		}
+		const prevMediaTitle = this.mediaList[prevIndex].title;
+	
+		const leftArrow = document.querySelector(".left-arrow");
+		leftArrow.setAttribute("aria-label", "Previous image: " + prevMediaTitle);
+	
+		this.currentIndex = prevIndex;
 		this.displaySlider(this.mediaList[this.currentIndex]);
 	}
 
 	showNextMedia() {
+		let nextIndex;
 		if (this.currentIndex < this.mediaList.length - 1) {
-			this.currentIndex++;
+			nextIndex = this.currentIndex + 1;
 		} else {
-			this.currentIndex = 0;
+			nextIndex = 0;
 		}
+		const nextMediaTitle = this.mediaList[nextIndex].title;
+	
+		const rightArrow = document.querySelector(".right-arrow");
+		rightArrow.setAttribute("aria-label", "Next image: " + nextMediaTitle);
+	
+		this.currentIndex = nextIndex;
 		this.displaySlider(this.mediaList[this.currentIndex]);
 	}
 
