@@ -255,7 +255,9 @@ label{
 
 
 
-
+.dropbtn[aria-expanded="true"] ~ .dropdown-content {
+    display: block;
+}
 
 
 

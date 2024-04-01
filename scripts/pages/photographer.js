@@ -68,6 +68,28 @@ class PhotographerPage {
 		this.displayPhotographerMedia();
 		this.displayLikesAndPrice();
 
+		const dropbtn = document.querySelector(".dropbtn");
+		dropbtn.setAttribute("aria-expanded", "false"); // Ajoutez cette ligne
+        
+		dropbtn.addEventListener("keydown", (event) => {
+			if (event.key === "Enter") {
+				const expanded = dropbtn.getAttribute("aria-expanded") === "true";
+				dropbtn.setAttribute("aria-expanded", !expanded);
+				dropbtn.click();
+			}
+		});
+
+
+		const dropdownItems = document.querySelectorAll(".dropdown-content a");
+
+		dropdownItems.forEach((item) => {
+			item.addEventListener("keydown", (event) => {
+				if (event.key === "Enter") {
+					dropbtn.setAttribute("aria-expanded", "false");
+				}
+			});
+		});
+        
 		document.querySelector(".dropdown-content").addEventListener("click", (event) => {
 			if (event.target.tagName === "A") {
 				const criteria = event.target.getAttribute("data-value");
