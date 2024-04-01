@@ -10,6 +10,8 @@ class Slider {
 		this.lightboxModal.setAttribute("aria-hidden", "true");
 		this.lightboxModal.setAttribute("role", "dialog");
 		this.lightboxModal.tabIndex = -1;
+		this.handleKeyDown = this.handleKeyDown.bind(this);
+
 	}
 
 	showPreviousMedia() {
@@ -92,7 +94,9 @@ class Slider {
 		lightboxModal.appendChild(closeButton);
 
 		// Add keydown event listener when the slider is displayed
-		document.addEventListener("keydown", this.handleKeyDown.bind(this));
+		// document.addEventListener("keydown", this.handleKeyDown.bind(this));
+		document.addEventListener("keydown", this.handleKeyDown);
+
 	}
 
 	handleKeyDown(event) {
@@ -117,7 +121,9 @@ class Slider {
 		modal.setAttribute("aria-hidden", "true");
 
 		// Remove keydown event listener when the slider is closed
-		document.removeEventListener("keydown", this.handleKeyDown.bind(this));
+		// document.removeEventListener("keydown", this.handleKeyDown.bind(this));
+		document.removeEventListener("keydown", this.handleKeyDown);
+
 	}
 }
 
