@@ -24,6 +24,8 @@ class MediaFactory {
 		const img = document.createElement("img");
 		img.src = `assets/medias/${media.photographerId}/${media.image}`;
 		img.alt = media.title;
+		img.tabIndex = 0; // Ajoutez cette ligne
+
 		container.appendChild(img);
 
 
@@ -73,6 +75,8 @@ class MediaFactory {
 		const video = document.createElement("video");
 		video.src = `assets/medias/${media.photographerId}/${media.video}`;
 		video.alt = media.title;
+		video.tabIndex = 0; // Ajoutez cette ligne
+
 		video.setAttribute("controls", "");
 		container.appendChild(video);
 
