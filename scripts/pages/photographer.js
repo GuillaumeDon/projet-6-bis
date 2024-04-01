@@ -81,7 +81,7 @@ class PhotographerPage {
 		this.displayLikesAndPrice();
 
 		const dropbtn = document.querySelector(".dropbtn");
-		dropbtn.setAttribute("aria-expanded", "false"); // Ajoutez cette ligne
+		dropbtn.setAttribute("aria-expanded", "Order by"); // Ajoutez cette ligne
         
 		dropbtn.addEventListener("keydown", (event) => {
 			if (event.key === "Enter") {

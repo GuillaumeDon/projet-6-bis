@@ -7,7 +7,7 @@ class Slider {
 		this.mediaList = mediaList;
 		this.currentIndex = 0;
 		this.lightboxModal = document.getElementById("lightbox_modal");
-		this.lightboxModal.setAttribute("aria-hidden", "true");
+		this.lightboxModal.setAttribute("aria-hidden", "image close up view");
 		this.lightboxModal.setAttribute("role", "dialog");
 		this.lightboxModal.tabIndex = -1;
 		this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -38,6 +38,7 @@ class Slider {
 
 	displaySlider(media) {
 		let mediaUrl;
+		
 		if (media.image) {
 			mediaUrl = `assets/medias/${media.photographerId}/${media.image}`;
 		} else {
@@ -63,6 +64,8 @@ class Slider {
 			titleElement.textContent = mediaTitle;
 			titleElement.classList.add("media-title");
 			lightboxModal.appendChild(titleElement);
+			this.lightboxModal.setAttribute("aria-label", `Close-up view of ${mediaTitle}`);
+
 		}
 
 		if (mediaElement) {

@@ -71,7 +71,7 @@ class PhotographerCard {
 
 		const btnContact =document.createElement("button");
 		btnContact.classList.add("contact_form");
-		btnContact.innerHTML ="<class=\"contact_form\" aria-label=\"Contact me\" onclick=\"displayModal()\">Contactez-moi";
+		btnContact.innerHTML ="<class=\"contact_form\" aria-label=\"Contact me, ${photographerName}\" onclick=\"displayModal()\">Contactez-moi";
 
 		btnContact.addEventListener("keydown", function(event) {
 			if (event.key === "Enter") {
