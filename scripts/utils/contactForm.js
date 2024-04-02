@@ -55,7 +55,7 @@ document.querySelector("#contact_modal form").addEventListener("submit", functio
 	this.reset();
 
 
-	closeModal(); // Fermez la modale après soumission du formulaire.
+	closeModal(); 
 });
 
 // Fermez la modale avec la touche "échap".

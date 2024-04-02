@@ -4,7 +4,7 @@ import { Slider } from "../utils/slider.js";
 
 class MediaFactory {
 	constructor() {
-		this.slider = new Slider(this.mediaList); // Créez une instance de Slider avec mediaList
+		this.slider = new Slider(this.mediaList); // Créer une instance de Slider avec mediaList
 		this.mediaList = [];
 	}
 
