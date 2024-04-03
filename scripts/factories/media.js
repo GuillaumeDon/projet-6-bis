@@ -75,7 +75,7 @@ class MediaFactory {
 		const video = document.createElement("video");
 		video.src = `assets/medias/${media.photographerId}/${media.video}`;
 		video.alt = media.title;
-		video.tabIndex = 0; // Ajoutez cette ligne
+		video.tabIndex = 0; 
 
 		video.setAttribute("controls", "");
 		container.appendChild(video);
@@ -104,7 +104,7 @@ class MediaFactory {
 		heart.alt = "likes";
 		heart.classList.add("heart");
 
-		// Ajoutez un gestionnaire d'événements pour empêcher la propagation de l'événement click
+		// Ajoute un gestionnaire d'événements pour empêcher la propagation de l'événement click
 		heart.addEventListener("click", (event) => {
 			event.stopPropagation();
 			this.toggleLike(media, likes);
