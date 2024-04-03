@@ -30,7 +30,7 @@ class PhotographersGallery {
 			photographerLinks.forEach((link, index) => {
 				link.setAttribute("tabindex", "0"); // Rend le lien focusable
 	
-				// Ajoutez un écouteur d'événements "keydown" au lien
+				// Ajoute un écouteur d'événements "keydown" au lien
 				link.addEventListener("keydown", (event) => {
 					switch (event.key) {
 					case "ArrowRight":

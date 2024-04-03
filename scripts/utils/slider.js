@@ -110,8 +110,8 @@ class Slider {
 
 		lightboxModal.appendChild(closeButton);
 
-		// Add keydown event listener when the slider is displayed
-		// document.addEventListener("keydown", this.handleKeyDown.bind(this));
+		// Ajout de la navigation clavier quand le slider est affiché
+		
 		document.addEventListener("keydown", this.handleKeyDown);
 
 	}
@@ -137,7 +137,7 @@ class Slider {
 		modal.style.display = "none";
 		modal.setAttribute("aria-hidden", "true");
 
-		// Remove keydown event listener when the slider is closed
+		// Supprime la navigation clavier quand le slider est affiché
 		// document.removeEventListener("keydown", this.handleKeyDown.bind(this));
 		document.removeEventListener("keydown", this.handleKeyDown);
 

@@ -10,7 +10,7 @@ function displayModal() {
 	const firstInput = document.getElementById("first-name");
 	firstInput.focus();
 
-	// Ajoutez la gestion de la navigation clavier entre les inputs
+	// Ajoute la gestion de la navigation clavier entre les inputs
 	const formInputs = modal.querySelectorAll("input");
 	formInputs.forEach((input, index) => {
 		input.addEventListener("keydown", (event) => {
@@ -22,11 +22,11 @@ function displayModal() {
 		});
 	});
 
-	// Ajoutez la gestion de la validation du formulaire avec la touche "Entrée" sur le bouton de soumission
+	// Ajoute la gestion de la validation du formulaire avec la touche "Entrée" sur le bouton de soumission
 	const submitButton = modal.querySelector("button[type=\"submit\"]");
 	submitButton.addEventListener("keydown", (event) => {
 		if (event.key === "Enter") {
-			event.preventDefault(); // Empêchez le comportement par défaut du bouton submit
+			event.preventDefault(); // Empêche le comportement par défaut du bouton submit
 			document.querySelector("#contact_modal form").dispatchEvent(new Event("submit"));
 		}
 	});
@@ -58,7 +58,7 @@ document.querySelector("#contact_modal form").addEventListener("submit", functio
 	closeModal(); 
 });
 
-// Fermez la modale avec la touche "échap".
+// Ferme la modale avec la touche "échap".
 window.addEventListener("keydown", function (event) {
 
 
