@@ -69,7 +69,7 @@ class PhotographerPage {
 	displayLikesAndPrice() {
 		const totalLikes = this.media.reduce((sum, mediaItem) => sum + mediaItem.likes, 0);
 		document.querySelector(".counter-like").innerHTML = `<div class="counter-like-number">
-            ${totalLikes} <img class="heart" src="assets/images/blackheart.png" alt="Logo de coeur pour les ikes">
+            ${totalLikes} <img class="heart" src="assets/images/blackheart.png" alt="Logo de coeur pour les likes">
             </div>
             <div class="counter-like-price">
             ${this.photographer.price}€ /jour
