@@ -24,7 +24,7 @@ class MediaFactory {
 		const img = document.createElement("img");
 		img.src = `assets/medias/${media.photographerId}/${media.image}`;
 		img.alt = media.title;
-		img.tabIndex = 0; // Ajoutez cette ligne
+		img.tabIndex = 0;
 
 		container.appendChild(img);
 
