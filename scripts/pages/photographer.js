@@ -64,6 +64,8 @@ class PhotographerPage {
 		}
 	}
 
+	
+
 	displayLikesAndPrice() {
 		const totalLikes = this.media.reduce((sum, mediaItem) => sum + mediaItem.likes, 0);
 		document.querySelector(".counter-like").innerHTML = `<div class="counter-like-number">
@@ -79,6 +81,19 @@ class PhotographerPage {
 		this.displayPhotographerInfo();
 		this.displayPhotographerMedia();
 		this.displayLikesAndPrice();
+
+		document.addEventListener("likeChanged", (event) => {
+			const changedMedia = event.detail;
+			const mediaIndex = this.media.findIndex(mediaItem => mediaItem.id === changedMedia.id);
+			if (mediaIndex !== -1) {
+				if (changedMedia.liked) {
+					this.totalLikes++;
+				} else {
+					this.totalLikes--;
+				}
+				this.displayLikesAndPrice();
+			}
+		});
 
 		const dropbtn = document.querySelector(".dropbtn");
 		dropbtn.setAttribute("aria-expanded", "Order by"); 

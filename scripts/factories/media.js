@@ -125,7 +125,8 @@ class MediaFactory {
 		}
 
 		likesElement.textContent = `${media.likes} likes`;
-
+		const likeChangedEvent = new CustomEvent("likeChanged", { detail: media });
+		document.dispatchEvent(likeChangedEvent);
 		this.updateLikesInJson(media);
 	}
 
